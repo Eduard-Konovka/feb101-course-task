@@ -118,7 +118,7 @@ export default function SpecificBookView({
                     <Button
                       title="Add book to cart"
                       type="button"
-                      disabled={count === null}
+                      disabled={count < 1}
                       styles={s.btn}
                       onClick={() =>
                         addToCart({ ...book, count: Number(count) })
