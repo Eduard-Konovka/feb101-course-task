@@ -15,7 +15,7 @@ export default function SelectedBook({
   return (
     <article className={s.card}>
       <div className={s.thumb}>
-        <Link to={`/books/:${_id}`} title={`Go to the book "${title}"`}>
+        <Link to={`/books/${_id}`} title={`Go to the book "${title}"`}>
           <img
             src={image && image !== '' ? image : defaultImage}
             alt={title}
