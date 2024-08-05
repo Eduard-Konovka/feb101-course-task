@@ -48,11 +48,11 @@ export default function SpecificBookView({
     <main className={s.page} style={{ minHeight: mainHeight }}>
       {loading && <Spinner size={70} color="blue" />}
 
-      {error && (
+      {!loading && error && (
         <p className={s.error}>Whoops, something went wrong: {error.message}</p>
       )}
 
-      {book && (
+      {!loading && !error && book && (
         <>
           <div className={s.row}>
             <img
