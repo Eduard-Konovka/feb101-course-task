@@ -231,7 +231,12 @@ export default function BooksView({ booksByTag, setBooks }) {
                 </Button>
               </div>
 
-              <select className={s.inputByPrice} onChange={handlePriceChange}>
+              <select
+                id="inputByPrice"
+                name="inputByPrice"
+                className={s.inputByPrice}
+                onChange={handlePriceChange}
+              >
                 {optionList && <OptionList books={books} />}
               </select>
 
@@ -246,12 +251,13 @@ export default function BooksView({ booksByTag, setBooks }) {
             </form>
 
             <form className={s.sortBar}>
-              <label htmlFor="sort" className={s.sortLabel}>
+              <label htmlFor="inputBySort" className={s.sortLabel}>
                 Sort by
               </label>
 
               <select
-                name="sort"
+                id="inputBySort"
+                name="inputBySort"
                 className={s.inputBySort}
                 onChange={handleSort}
               >
